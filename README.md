@@ -23,7 +23,7 @@ Follow the TODOs printed out and in the README.md
 ## Installing locally
 
 > This is only necessary if you're testing local changes.
-> Otherwise `lein new kraken-works` will just download the latest version
+> Otherwise `lein new kraken-http-api` will just download the latest version
 > from Clojars.
 
 From this directory, run:
