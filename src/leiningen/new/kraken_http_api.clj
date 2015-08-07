@@ -34,7 +34,8 @@
 
              ["resources/config.edn" (render "config.edn" data)]
 
-             ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
+             ["src/{{sanitized}}/server.clj" (render "server.clj" data)]
+             ["src/{{sanitized}}/service.clj" (render "service.clj" data)]
              ["src/{{sanitized}}/queue.clj" (render "queue.clj" data)]
              ["src/{{sanitized}}/channels.clj" (render "channels.clj" data)]
              ["src/{{sanitized}}/handlers.clj" (render "handlers.clj" data)]
