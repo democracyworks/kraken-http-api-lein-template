@@ -25,7 +25,6 @@
              ["Dockerfile" (render "Dockerfile" data)]
              ["{{name}}@.service.template" (render "PROJECT@.service.template" data)]
              ["docker-compose.yml" (render "docker-compose.yml" data)]
-             ["profiles.clj.sample" (render "profiles.clj.sample" data)]
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
              ["LICENSE" (render "LICENSE" data)]
