@@ -1,15 +1,15 @@
-(ns leiningen.new.kraken-works
+(ns leiningen.new.kraken-http-api
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
             [leiningen.core.main :as main]))
 
-(def render (renderer "kraken-works"))
+(def render (renderer "kraken-http-api"))
 
-(defn kraken-works
+(defn kraken-http-api
   "FIXME: write documentation"
   [name]
   (let [data {:name name
               :sanitized (name-to-path name)}]
-    (main/info (str "Generating fresh kraken-works project in directory " (:sanitized data) "/."))
+    (main/info (str "Generating fresh kraken-http-api project in directory " (:sanitized data) "/."))
 
     (main/info (str "TODO: (you probably want to `cd " name "` first)"))
     (main/info " * in resources/config.edn, change queue name to something more appropriate")
