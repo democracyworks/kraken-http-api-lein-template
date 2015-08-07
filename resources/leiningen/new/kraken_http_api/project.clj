@@ -23,7 +23,7 @@
 
                  [democracyworks/kehaar "0.5.0"]]
   :plugins [[lein-immutant "2.0.0"]]
-  :main ^:skip-aot {{name}}.core
+  :main ^:skip-aot {{name}}.server
   :target-path "target/%s"
   :repositories {"my.datomic.com" {:url "https://my.datomic.com/repo"
                                    :username [:gpg :env]
