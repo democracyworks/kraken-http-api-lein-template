@@ -7,10 +7,17 @@
               [clojure.tools.logging :as log]
               [immutant.util :as immutant]))
 
+(defn shutdown [rabbit-resources]
+  (channels/close-all!)
+  (queue/close-all! rabbit-resources))
+
+(defn start-http-server [& [options]]
+  (-> (service/service)
+      (merge options)
+      http/create-server
+      http/start))
+
 (defn -main [& args]
-  (cond (config :datomic :initialize) (db/initialize)
-        (config :datomic :run-migrations) (db/run-migrations))
   (let [rabbit-resources (queue/initialize)]
-    (immutant/at-exit (fn []
-                        (queue/close-all! rabbit-resources)
-                        (channels/close-all!)))))
+    (start-http-server)
+    (immutant/at-exit (partial shutdown rabbit-resources))))
