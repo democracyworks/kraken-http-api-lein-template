@@ -6,5 +6,5 @@
 (defonce ok-responses (async/chan))
 
 (defn close-all! []
-  (doseq [c []]
+  (doseq [c [ok-requests ok-responses]]
     (async/close! c)))
