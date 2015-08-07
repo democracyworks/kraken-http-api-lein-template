@@ -30,6 +30,6 @@
                                    :password [:gpg :env]}}
   :uberjar-name "{{name}}.jar"
   :profiles {:uberjar {:aot :all}
-             :dev-common {:resource-paths ["dev-resources"]}
-             :dev-overrides {}
-             :dev [:dev-common :dev-overrides]})
+             :dev {:resource-paths ["dev-resources"]}
+             :test {:dependencies [[clj-http "2.0.0"]]
+                    :jvm-opts ["-Dlog-level=INFO"]}})
