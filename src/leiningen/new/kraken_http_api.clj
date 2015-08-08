@@ -33,6 +33,7 @@
              ["script/build" (render "script/build" data)]
 
              ["resources/config.edn" (render "config.edn" data)]
+             ["resources/logback.xml" (render "logback.xml" data)]
 
              ["src/{{sanitized}}/server.clj" (render "server.clj" data)]
              ["src/{{sanitized}}/service.clj" (render "service.clj" data)]
