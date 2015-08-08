@@ -17,7 +17,7 @@
     (main/info " * `chmod +x script/*`")
     (main/info " * `git init`")
     (main/info " * `git add .`")
-    (main/info " * `git commit -am \"initial commit\"`")
+    (main/info " * `git commit -m \"initial commit\"`")
     (main/info " * push this to github")
     (main/info " * make a Buildkite project")
     (->files data
