@@ -25,9 +25,6 @@
   :plugins [[lein-immutant "2.0.0"]]
   :main ^:skip-aot {{name}}.server
   :target-path "target/%s"
-  :repositories {"my.datomic.com" {:url "https://my.datomic.com/repo"
-                                   :username [:gpg :env]
-                                   :password [:gpg :env]}}
   :uberjar-name "{{name}}.jar"
   :profiles {:uberjar {:aot :all}
              :dev {:resource-paths ["dev-resources"]}
