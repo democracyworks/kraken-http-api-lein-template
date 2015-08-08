@@ -5,6 +5,7 @@
             [kehaar.wire-up :as wire-up]
             [kehaar.rabbitmq]
             [{{name}}.channels :as channels]
+            [{{name}}.handlers :as handlers]
             [turbovote.resource-config :refer [config]]))
 
 (defn initialize []
@@ -20,6 +21,11 @@
                               channels/ok-responses)]
           external-services []
           outgoing-events []]
+
+      (wire-up/start-responder! channels/ok-requests
+                                channels/ok-responses
+                                handlers/ok)
+      
       {:connections [connection]
        :channels (vec (concat
                        incoming-events
