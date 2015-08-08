@@ -9,7 +9,8 @@
 
 (defn initialize []
   (let [max-retries 5
-        connection (kehaar.rabbitmq/connect-with-retries max-retries)]
+        rabbit-config (config [:rabbitmq :connection])
+        connection (kehaar.rabbitmq/connect-with-retries rabbit-config max-retries)]
     (let [incoming-events []
           incoming-services [(wire-up/incoming-service
                               connection
