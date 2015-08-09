@@ -1,9 +1,10 @@
 (ns {{name}}.service-test
-    (:require [{{name}}.server :as server]
-              [clj-http.client :as http]
-              [clojure.edn :as edn]
-              [cognitect.transit :as transit]
-              [clojure.test :refer :all]))
+  (:require [{{name}}.server :as server]
+            [clj-http.client :as http]
+            [clojure.edn :as edn]
+            [cognitect.transit :as transit]
+            [clojure.core.async :as async]
+            [clojure.test :refer :all]))
 
 (def test-server-port 56000) ; FIXME: Pick a port unique to this project
 
