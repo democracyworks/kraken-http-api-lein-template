@@ -28,6 +28,7 @@
 
 (defn service []
   {::env :prod
+   ::bootstrap/router :linear-search
    ::bootstrap/routes routes
    ::bootstrap/resource-path "/public"
    ::bootstrap/host (config [:server :hostname])
