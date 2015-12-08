@@ -22,7 +22,8 @@
                  [democracyworks/pedestal-toolbox "0.6.2"]
                  [org.immutant/web "2.1.1"]
                  [io.pedestal/pedestal.immutant "0.4.1"]
-                 [org.immutant/core "2.1.1"]]
+                 [org.immutant/core "2.1.1"]
+                 [democracyworks/bifrost "0.1.4"]]
   :plugins [[lein-immutant "2.1.0"]]
   :main ^:skip-aot {{name}}.server
   :target-path "target/%s"
