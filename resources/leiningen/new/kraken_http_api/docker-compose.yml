@@ -6,7 +6,7 @@ app:
   environment:
     ALLOWED_ORIGINS: :all
 wildfly:
-  image: quay.io/democracyworks/wildfly:8.2.1.Final-debug
+  image: quay.io/democracyworks/wildfly:9.0.2.Final-debug
   links:
     - rabbitmq
   ports:
