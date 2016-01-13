@@ -6,8 +6,8 @@
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/tools.logging "0.3.1"]
                  [turbovote.resource-config "0.2.0"]
-                 [com.novemberain/langohr "3.4.1"]
-                 [prismatic/schema "1.0.3"]
+                 [com.novemberain/langohr "3.5.0"]
+                 [prismatic/schema "1.0.4"]
                  [ch.qos.logback/logback-classic "1.1.3"]
 
                  ;; core.async has to come before pedestal or kehaar.wire-up will
@@ -20,9 +20,9 @@
                  [io.pedestal/pedestal.service "0.4.1"]
                  [io.pedestal/pedestal.service-tools "0.4.1"]
                  [democracyworks/pedestal-toolbox "0.6.2"]
-                 [org.immutant/web "2.1.1"]
+                 [org.immutant/web "2.1.2"]
                  [io.pedestal/pedestal.immutant "0.4.1"]
-                 [org.immutant/core "2.1.1"]
+                 [org.immutant/core "2.1.2"]
                  [democracyworks/bifrost "0.1.4"]]
   :plugins [[lein-immutant "2.1.0"]]
   :main ^:skip-aot {{name}}.server
