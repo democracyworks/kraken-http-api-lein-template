@@ -10,8 +10,7 @@
             [kehaar.core :as k]
             [clojure.core.async :refer [go alt! timeout]]
             [bifrost.core :as bifrost]
-            [bifrost.interceptors :as bifrost.i]
-            [{{name}}.channels :as channels]))
+            [bifrost.interceptors :as bifrost.i]))
 
 (def ping
   (interceptor

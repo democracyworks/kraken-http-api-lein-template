@@ -1,15 +1,10 @@
 (ns {{name}}.server
     (:require [{{name}}.service :as service]
               [io.pedestal.http :as http]
-              [{{name}}.channels :as channels]
-              [{{name}}.queue :as queue]
               [turbovote.resource-config :refer [config]]
               [clojure.tools.logging :as log]
-              [immutant.util :as immutant]))
-
-(defn shutdown [rabbit-resources]
-  (channels/close-all!)
-  (queue/close-all! rabbit-resources))
+              [immutant.util :as immutant]
+              [kehaar.power :as power]))
 
 (defn start-http-server [& [options]]
   (-> (service/service)
@@ -18,6 +13,6 @@
       http/start))
 
 (defn -main [& args]
-  (let [rabbit-resources (queue/initialize)]
-    (start-http-server (config [:server]))
-    (immutant/at-exit (partial shutdown rabbit-resources))))
+  (power/connect-rabbit 5 (config [:rabbitmq :connection]))
+  (start-http-server (config [:server]))
+  (immutant/at-exit power/disconnect-rabbit))
