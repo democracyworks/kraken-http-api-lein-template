@@ -7,11 +7,10 @@
             [turbovote.resource-config :refer [config]]
             [pedestal-toolbox.params :refer :all]
             [pedestal-toolbox.content-negotiation :refer :all]
-            [kehaar.core :as k]
+            [kehaar.power :as power]
             [clojure.core.async :refer [go alt! timeout]]
             [bifrost.core :as bifrost]
-            [bifrost.interceptors :as bifrost.i]
-            [{{name}}.channels :as channels]))
+            [bifrost.interceptors :as bifrost.i]))
 
 (def ping
   (interceptor

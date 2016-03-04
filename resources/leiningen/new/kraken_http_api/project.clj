@@ -15,7 +15,7 @@
                  ;; kehaar.core/go-handler. (This may not be true anymore in
                  ;; core.async 0.2.x; need to test.)
                  [org.clojure/core.async "0.2.374"]
-                 [democracyworks/kehaar "0.5.0"]
+                 [democracyworks/kehaar "0.5.1-SNAPSHOT"]
 
                  [io.pedestal/pedestal.service "0.4.1"]
                  [io.pedestal/pedestal.service-tools "0.4.1"]
@@ -23,7 +23,7 @@
                  [org.immutant/web "2.1.2"]
                  [io.pedestal/pedestal.immutant "0.4.1"]
                  [org.immutant/core "2.1.2"]
-                 [democracyworks/bifrost "0.1.4"]]
+                 [democracyworks/bifrost "0.1.5-SNAPSHOT"]]
   :plugins [[lein-immutant "2.1.0"]]
   :main ^:skip-aot {{name}}.server
   :target-path "target/%s"
