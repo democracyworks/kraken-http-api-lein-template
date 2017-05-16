@@ -5,9 +5,14 @@ WORKDIR /usr/src/{{name}}
 
 COPY project.clj /usr/src/{{name}}/
 
-RUN lein deps
+ARG env=production
+
+RUN lein with-profile $env deps
 
 COPY . /usr/src/{{name}}
 
-RUN lein test
-RUN lein immutant war --name {{name}} --destination target --nrepl-port=11111 --nrepl-start --nrepl-host=0.0.0.0
+RUN lein with-profiles $env,test test
+RUN lein with-profile $env uberjar
+
+CMD java ${JVM_OPTS:--XX:+UseG1GC} \
+    -jar target/{{name}}.jar

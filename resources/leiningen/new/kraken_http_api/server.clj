@@ -1,11 +1,11 @@
 (ns {{name}}.server
-    (:require [{{name}}.service :as service]
-              [io.pedestal.http :as http]
-              [{{name}}.channels :as channels]
-              [{{name}}.queue :as queue]
-              [turbovote.resource-config :refer [config]]
-              [clojure.tools.logging :as log]
-              [immutant.util :as immutant]))
+  (:require [{{name}}.service :as service]
+            [io.pedestal.http :as http]
+            [{{name}}.channels :as channels]
+            [{{name}}.queue :as queue]
+            [turbovote.resource-config :refer [config]]
+            [immutant.util :as immutant])
+  (:gen-class))
 
 (defn shutdown [rabbit-resources]
   (channels/close-all!)

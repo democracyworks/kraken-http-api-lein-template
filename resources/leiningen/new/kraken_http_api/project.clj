@@ -19,7 +19,6 @@
                  [democracyworks/bifrost "0.1.5"]]
   :plugins [[lein-immutant "2.1.0"]]
   :main ^:skip-aot {{name}}.server
-  :target-path "target/%s"
   :uberjar-name "{{name}}.jar"
   :profiles {:uberjar {:aot :all}
              :dev {:resource-paths ["dev-resources"]}
