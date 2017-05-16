@@ -19,5 +19,5 @@
 
 (defn -main [& args]
   (let [rabbit-resources (queue/initialize)]
-    (start-http-server (config [:server]))
+    (start-http-server)
     (immutant/at-exit (partial shutdown rabbit-resources))))

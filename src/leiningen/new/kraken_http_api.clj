@@ -12,7 +12,6 @@
     (main/info (str "Generating fresh kraken-http-api project in directory " (:sanitized data) "/."))
 
     (main/info (str "TODO: (you probably want to `cd " name "` first)"))
-    (main/info " * in resources/config.edn, change queue name to something more appropriate")
     (main/info " * Review and address the TODO items in the README.")
     (main/info " * `chmod +x script/*`")
     (main/info " * `git init`")
