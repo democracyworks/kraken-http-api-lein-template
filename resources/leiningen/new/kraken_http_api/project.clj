@@ -9,7 +9,7 @@
                  [com.novemberain/langohr "3.7.0"]
                  [prismatic/schema "1.1.6"]
                  [ch.qos.logback/logback-classic "1.2.2"]
-                 [democracyworks/kehaar "0.5.0"]
+                 [democracyworks/kehaar "0.10.4"]
                  [io.pedestal/pedestal.service "0.5.2"]
                  [io.pedestal/pedestal.service-tools "0.5.2"]
                  [democracyworks/pedestal-toolbox "0.7.0"]
