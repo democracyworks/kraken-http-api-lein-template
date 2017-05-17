@@ -1,4 +1,4 @@
-(defproject kraken-http-api/lein-template "0.1.3-SNAPSHOT"
+(defproject kraken-http-api/lein-template "0.1.3"
   :description "Leiningen template for kraken-http-api components"
   :url "https://github.com/democracyworks/kraken-http-api-lein-template"
   :license {:name "Eclipse Public License"
