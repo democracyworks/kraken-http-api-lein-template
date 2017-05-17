@@ -12,7 +12,6 @@
     (main/info (str "Generating fresh kraken-http-api project in directory " (:sanitized data) "/."))
 
     (main/info (str "TODO: (you probably want to `cd " name "` first)"))
-    (main/info " * in resources/config.edn, change queue name to something more appropriate")
     (main/info " * Review and address the TODO items in the README.")
     (main/info " * `chmod +x script/*`")
     (main/info " * `git init`")
@@ -25,6 +24,7 @@
              ["Dockerfile" (render "Dockerfile" data)]
              ["{{name}}@.service.template" (render "PROJECT@.service.template" data)]
              ["docker-compose.yml" (render "docker-compose.yml" data)]
+             ["newrelic.yml" (render "newrelic.yml" data)]
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
              ["LICENSE" (render "LICENSE" data)]

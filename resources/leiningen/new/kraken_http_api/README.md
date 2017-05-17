@@ -9,7 +9,7 @@ TODO: Add {{name}} specific configuration.
 * ALLOWED_ORIGINS
     * This env var controls the cross-origin resource sharing (CORS) settings.
     * It should be set to one of the following:
-        * `:all` to allow requests from any origin
+        * `[".*"]` to allow requests from any origin
         * an EDN seq of allowed origin strings
         * an EDN map containing the following keys and values
             * :allowed-origins - sequence of strings
@@ -59,7 +59,7 @@ automate building and deploying to CoreOS.
 
 ## License
 
-Copyright © 2015 Democracy Works, Inc.
+Copyright © 2017 Democracy Works, Inc.
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
