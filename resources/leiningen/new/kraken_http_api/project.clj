@@ -12,6 +12,7 @@
                  [io.pedestal/pedestal.log "0.5.3"]
                  [io.pedestal/pedestal.service "0.5.3"]
                  [io.pedestal/pedestal.service-tools "0.5.3"]
+                 [org.clojure/core.async "0.3.443"]
                  [org.clojure/tools.logging "0.4.0"]
                  [org.immutant/core "2.1.9"]
                  [org.immutant/web "2.1.9"]
